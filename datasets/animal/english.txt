@@ -1,0 +1,141 @@
+Human
+Gibbon
+Chimpanzee
+Gorilla
+Orangutan
+Bonobo
+Cattle
+Pig
+Sheep
+Goat
+Water buffalo
+White-tailed deer
+Impala
+Springbok
+Moose
+African buffalo
+Alpine ibex
+American bison
+Hippopotamus
+Mountain goat
+Okapi
+Wild yak
+Dromedary
+Bactrian camel
+Llama
+Alpaca
+Horse
+Donkey
+Mule
+Plains zebra
+Mountain zebra
+White rhinoceros
+Tapir
+Black rhinoceros
+Dog
+Cat
+Harp seal
+Crabeater seal
+American black bear
+Grey wolf
+Brown bear
+Sea otter
+Leopard
+Spotted hyena
+Maned wolf
+Polar bear
+Lion
+Sloth bear
+Sechuran fox
+Striped hyena
+Red panda
+Brown hyena
+Eurasian lynx
+Snow leopard
+Cheetah
+African wild dog
+Tiger
+Giant panda
+Marine otter
+Iberian lynx
+Cozumel raccoon
+Black-footed ferret
+Red wolf
+Red fox
+Mallard
+Long-tailed duck
+Northern shoveler
+Magpie goose
+Greylag goose
+Cackling goose
+Mute swan
+Tundra swan
+Swift
+Chimney swift
+White-necked jacobin
+Cattle egret
+White-faced ibis
+Straw-necked ibis
+White stork
+Black stork
+Grey heron
+Mourning dove
+Rock dove
+Wood pigeon
+European turtle dove
+Kingfisher
+Cuckoo
+Kestrel
+Buzzard
+Hen harrier
+Merlin
+Peregrine falcon
+Black kite
+Northern goshawk
+Western marsh harrier
+Roadside hawk
+Hooded vulture
+Golden eagle
+Pheasant
+Willow ptarmigan
+Quail
+American coot
+Corn crake
+Limpkin
+Crane
+Demoiselle crane
+Guanay cormorant
+Great cormorant
+American white pelican
+Peruvian pelican
+Spot-billed pelican
+Dalmatian pelican
+Lesser flamingo
+Greater flamingo
+Great spotted woodpecker
+Lineated woodpecker
+Black woodpecker
+Laysan albatross
+Black-browed albatross
+Grey-headed albatross
+Cockatiel
+Budgerigar
+White cockatoo
+Scarlet macaw
+Macaroni penguin
+Emperor penguin
+Royal penguin
+King penguin
+Little owl
+Short-eared owl
+Tawny owl
+Snowy owl
+Eurasian eagle-owl
+Emu
+North Island brown kiwi
+Southern brown kiwi
+Little spotted kiwi
+Raven
+House sparrow
+Great tit
+Eurasian blue tit
