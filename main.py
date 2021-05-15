@@ -11,6 +11,7 @@ Usage:
 
 import sys
 import argparse
+from tqdm import tqdm
 
 from utils.ds import load_all, load_dataset
 from utils.avail import is_available
@@ -40,23 +41,23 @@ def main():
     if dataset == 'all':
         names = load_all()
         if args.dump:
-            for name in names:
+            for name in tqdm(names):
                 name = convert_to_domain(name)
                 mode = "w" if name == names[0] else "a"
                 stdout_file(name, is_available, mode)
         if args.print:
-            for name in names:
+            for name in tqdm(names):
                 name = convert_to_domain(name)
                 stdout_console(name, is_available)
     else:
         names = load_dataset(dataset)
         if args.dump:
-            for name in names:
+            for name in tqdm(names):
                 name = convert_to_domain(name)
                 mode = "w" if name == names[0] else "a"
                 stdout_file(name, is_available, mode)
         if args.print:
-            for name in names:
+            for name in tqdm(names):
                 name = convert_to_domain(name)
                 stdout_console(name, is_available)
 
