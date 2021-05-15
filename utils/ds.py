@@ -18,7 +18,7 @@ def load_all():
 	return _all
 
 def load_dataset(directory):
-	datasets = ROOT_DIR.joinpath('directory').rglob('*.txt')
+	datasets = ROOT_DIR.joinpath(directory).rglob('*.txt')
 	_all = []
 	for dataset in datasets:
 		words = open(dataset, 'r').read().splitlines()
