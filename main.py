@@ -15,7 +15,7 @@ import argparse
 
 from utils.ds import load_all, load_dataset
 from utils.avail import is_available
-from utils.create import creator
+from utils.stdout import stdout_file, stdout_console
 
 def cmdline():
     p = argparse.ArgumentParser(description=__doc__,
@@ -39,20 +39,22 @@ def main():
     dataset = args.dataset
     if dataset == 'all':
         names = load_all()
-        for name in names:
-           if args.dump:
-           	    mode = 'w' if name == names[0] else 'a'
-                creator(name, is_available, mode)
-            if args.print:
-                pass # print
+        if args.dump:
+            for name in names:
+                mode = "w" if name == names[0] else "a"
+                stdout_file(name, is_available, mode)
+        if args.print:
+            for name in names:
+                stdout_console(name, is_available)
     else:
         names = load_dataset(dataset)
-        for name in names:
-           if args.dump:
-           	    mode = 'w' if name == names[0] else 'a'
-                creator(name, is_available, mode)
-            if args.print:
-                pass # print
+        if args.dump:
+            for name in names:
+                mode = "w" if name == names[0] else "a"
+                stdout_file(name, is_available, mode)
+        if args.print:
+            for name in names:
+                stdout_console(name, is_available)
 
 if __name__ == '__main__':
     
