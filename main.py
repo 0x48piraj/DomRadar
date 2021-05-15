@@ -13,7 +13,11 @@ Usage:
 import sys
 import argparse
 
-def cmdline(): # parser object
+from utils.ds import load_all, load_dataset
+from utils.avail import is_available
+from utils.create import creator
+
+def cmdline():
     p = argparse.ArgumentParser(description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
     
@@ -30,13 +34,32 @@ def cmdline(): # parser object
 
     return(p.parse_args())
 
+def main():
+    args = cmdline()
+    dataset = args.dataset
+    if dataset == 'all':
+        names = load_all()
+        for name in names:
+           if args.dump:
+           	    mode = 'w' if name == names[0] else 'a'
+                creator(name, is_available, mode)
+            if args.print:
+                pass # print
+    else:
+        names = load_dataset(dataset)
+        for name in names:
+           if args.dump:
+           	    mode = 'w' if name == names[0] else 'a'
+                creator(name, is_available, mode)
+            if args.print:
+                pass # print
+
 if __name__ == '__main__':
     
     if sys.version_info<(3,4,0):
         sys.stderr.write("You need python 3.4 or later to run this script\n")
         sys.exit(1)
     try:
-        args = cmdline()
-        print(args)
+        main()
     except:
         print('Try $ python main.py --help')
