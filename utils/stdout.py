@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-#Create an file with available domains
+# create an file with available domains
 def stdout_file(domain, is_available, mode):
     with open("available.txt", mode) as f:
         _name = is_available(domain)

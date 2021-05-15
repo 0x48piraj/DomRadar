@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-
 """
 Usage:
     $ python3 main.py --print or python3 main.py --dataset all --print
@@ -16,6 +15,7 @@ import argparse
 from utils.ds import load_all, load_dataset
 from utils.avail import is_available
 from utils.stdout import stdout_file, stdout_console
+from utils.process import convert_to_domain
 
 def cmdline():
     p = argparse.ArgumentParser(description=__doc__,
@@ -41,19 +41,23 @@ def main():
         names = load_all()
         if args.dump:
             for name in names:
+                name = convert_to_domain(name)
                 mode = "w" if name == names[0] else "a"
                 stdout_file(name, is_available, mode)
         if args.print:
             for name in names:
+                name = convert_to_domain(name)
                 stdout_console(name, is_available)
     else:
         names = load_dataset(dataset)
         if args.dump:
             for name in names:
+                name = convert_to_domain(name)
                 mode = "w" if name == names[0] else "a"
                 stdout_file(name, is_available, mode)
         if args.print:
             for name in names:
+                name = convert_to_domain(name)
                 stdout_console(name, is_available)
 
 if __name__ == '__main__':
@@ -63,5 +67,5 @@ if __name__ == '__main__':
         sys.exit(1)
     try:
         main()
-    except:
-        print('Try $ python main.py --help')
+    except KeyboardInterrupt:
+        sys.exit()
