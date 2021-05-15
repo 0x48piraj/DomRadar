@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Usage:
+Example:
     $ python3 main.py --print or python3 main.py --dataset all --print
     $ python3 main.py --dataset animal --dump/--print
     $ python3 main.py -ds animal -d/-p
