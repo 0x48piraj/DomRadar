@@ -10,6 +10,7 @@ Example:
 
 
 import sys
+import os
 import argparse
 from tqdm import tqdm
 
@@ -38,15 +39,19 @@ def cmdline():
 def main():
     args = cmdline()
     dataset = args.dataset
+
+    if os.environ.get("OS", "") == "Windows_NT":
+        os.system("color")
+
     if dataset == 'all':
         names = load_all()
         if args.dump:
-            for name in tqdm(names):
+            for name in tqdm(names, position=0, leave=True):
                 name = convert_to_domain(name)
                 mode = "w" if name == names[0] else "a"
                 stdout_file(name, is_available, mode)
         if args.print:
-            for name in tqdm(names):
+            for name in tqdm(names, position=0, leave=True):
                 name = convert_to_domain(name)
                 stdout_console(name, is_available)
     else:
