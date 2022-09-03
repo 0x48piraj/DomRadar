@@ -23,7 +23,7 @@ def cmdline():
     p = argparse.ArgumentParser(description=__doc__,
         formatter_class=argparse.RawDescriptionHelpFormatter)
     
-    p.add_argument("-ds", "--dataset", choices=['all','animal','random'], default='all',
+    p.add_argument("-ds", "--dataset", default='all',
                    help="name of the dataset to use")
     p.add_argument("-v", "--verbosity", type=int, choices=[0,1,2], default=0,
                    help="increase output verbosity (default: %(default)s)")
